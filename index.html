@@ -2,11 +2,326 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
+    <title>Техномарт — все для ремонта</title>
   </head>
+
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+    <header class="main_header">
+      <div class="container">
 
-  </body>
-</html>
+        <div class="to_start_page_btn">
+         <a href="#" class="to_start_page_link"> <img src="#" class="logo" width="80" height="30" alt="Техномарт"></a>
+        </div>
+
+        <form>
+         <p><input type="search" name="search" placeholder="Поиск:">
+        <input type="submit" value="search"></p>
+        </form>
+
+        <div class="bookmark">
+          Закладки: 0
+        </div>
+
+        <div class="cart">
+          Корзина: 0
+        </div>
+
+        <div class="shop_discription">
+          Интернет-магазин строительных материалов и инструментов для ремонта
+        </div>
+
+        <div class="contact">
+          <div>+7 (812) 555-05-55"</div>
+          <div>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</div>
+        </div>
+
+        <div class="user_block">
+          <a class="login" href="#">Вход</a>
+        </div>
+
+        <nav class="main_navigation">
+          <ul>
+            <li>
+              <a href="#">Главная</a>
+              <!--можно было бы убрать href раз мы и так на главной,
+              но по моим наблюдениям эту ссылку все равно обычно оставляют активной -->
+            </li>
+            <li>
+              <a href="#">Компания</a>
+            </li>
+            <li>
+              <a href="#">Каталог</a>
+            </li>
+            <li>
+              <a href="#">Новости</a>
+            </li>
+            <li>
+              <a href="#">Спецпредложения</a>
+            </li>
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+     </header>
+
+  <main class="container">
+    <section class="banners">
+
+    <!-- По поводу этих промо-блоков («материалы», «инструмент», ...).
+    В спецификации указано, что ссылками являются только кнопки на них. Не совсем уверен,
+    что делаю правильно, но я просто вставил две картинки, с расчетом позже в CSS
+    отпозиционировать их так, чтобы одна была на фоне второй.
+
+    Еще в спецификации написано, что промо-блоки являются "слайдерами". Нужно ли сейчас,
+    на этапе разметки что-то делать в этой связи? -->
+
+   <div class="materials">
+     <img src="#" class="materials_banner" width="160" height="60" alt="Материалы">
+     <a href="#" class="materials_link"> <img src="#" class="materials_button_icon" width="40" height="15" alt="На любой вкус"></a>
+   </div>
+
+   <div class="instrument">
+     <img src="#" class="instrument_banner" width="160" height="60" alt="Инструмент">
+     <a href="#" class="instrument_link"> <img src="#" class="instrument_button_icon" width="40" height="15" alt="На все случаи"></a>
+   </div>
+
+   <div class="machines">
+     <img src="#" class="machines_banner" width="160" height="60" alt="Техника">
+     <a href="#" class="machines_link"> <img src="#" class="machines_button_icon" width="40" height="15" alt="Для стройки"></a>
+   </div>
+
+   <div class="sale">
+     <img src="#" class="sale_banner" width="160" height="60" alt="Скидки 50%">
+     <a href="#" class="sale_link"> <img src="#" class="sale_button_icon" width="40" height="15" alt="На 350 товаров"></a>
+   </div>
+
+   <div class="delivery">
+     <img src="#" class="delivery_banner" width="160" height="60" alt="Доставка">
+     <a href="#" class="delivery_link"> <img src="#" class="delivery_button_icon" width="40" height="15" alt="Бесплатно"></a>
+   </div>
+
+     <!-- По поводу "Перфораторов" тоже не уверен, пока что просто сделал
+     по той же логике, что и остальные промо-блоки -->
+
+   <div class="puncher">
+     <img src="#" class="puncher_banner" width="320" height="120" alt="Перфораторы">
+     <a href="#" class="puncher_link"> <img src="#" class="puncher_button_icon" width="60" height="15" alt="Открыть каталог"></a>
+   </div>
+  </section>
+
+  <section class="popular_items">
+   <div class="subheader_1">
+    <h1>Популярные товары</h1>
+    <a href="#" class="popular_items_link"> <img src="#" class="popular_items_icon" width="120" height="40" alt="Все популярные товары">Все популярные товары</a>
+   </div>
+
+    <!-- не знаю, нужен здесь тег <figure> или нет. Наверное нет в том случае,
+    если текст идет отдельно от картинки. Но оставлю, пока не скажете убрать.  -->
+
+   <div class="popular_item_window">
+     <figure class="product_picture">
+       <img src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 9000">
+     </figure>
+     <div>
+       Перфоратор BOSCH BFG 9000
+     </div>
+     <div class="price_n_buy">
+       <span><s> 32500 </s></span>
+       <!-- или лучше обойтись без лишнего тега и сделать зачеркивание потом в CSS? -->
+       <a class="btn buy_btn" href="#">  <img src="#" class="buy_label" width="100" height="35" alt="Купить">25500 Р.</a>
+     </div>
+   </div>
+
+   <div class="popular_item_window">
+     <figure class="product_picture">
+       <img src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 9000">
+     </figure>
+     <div>
+       Перфоратор BOSCH BFG 3000
+     </div>
+     <div class="price_n_buy">
+       <span><s> 22500 </s></span>
+       <a class="btn buy_btn" href="#">  <img src="#" class="buy_label" width="100" height="35" alt="Купить">15500 Р.</a>
+     </div>
+   </div>
+
+   <div class="popular_item_window">
+     <figure class="product_picture">
+       <img src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 9000">
+     </figure>
+     <div>
+       Перфоратор BOSCH BFG 6000
+     </div>
+     <div class="price_n_buy">
+       <span><s> 30500 </s></span>
+       <a class="btn buy_btn" href="#">  <img src="#" class="buy_label" width="100" height="35" alt="Купить">25500 Р.</a>
+     </div>
+   </div>
+
+   <div class="popular_item_window">
+     <figure class="product_picture">
+       <img src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 9000">
+     </figure>
+     <div>
+       Перфоратор BOSCH BFG 2000
+     </div>
+     <div class="price_n_buy">
+       <a class="btn buy_btn" href="#">  <img src="#" class="buy_label" width="100" height="35" alt="Купить">12500 Р.</a>
+     </div>
+   </div>
+  </section>
+
+  <section class="popular_manufacturers">
+   <div class="subheader_2">
+    <h1>Популярные производители</h1>
+    <a href="#" class="popular_manufacturers_link"> <img src="#" class="popular_manufacturers_icon" width="120" height="40" alt="Все популярные производители">Все популярные производители</a>
+   </div>
+
+   <div class="popular_manufacturer_window">
+     <a href="#" class="bosch_link"> <img src="#" class="bosch_icon" width="300" height="250" alt="Bosch"></a>
+   </div>
+
+   <div class="popular_manufacturer_window">
+     <a href="#" class="makita_link"> <img src="#" class="makita_icon" width="300" height="250" alt="Makita"></a>
+   </div>
+
+   <div class="popular_manufacturer_window">
+     <a href="#" class="dewalt_link"> <img src="#" class="dewalt_icon" width="300" height="250" alt="Dewalt"></a>
+   </div>
+
+   <div class="popular_manufacturer_window">
+     <a href="#" class="interskol_link"> <img src="#" class="interskol_icon" width="300" height="250" alt="Интерскол"></a>
+   </div>
+
+   <div class="popular_manufacturer_window">
+     <a href="#" class="hitachi_link"> <img src="#" class="hitachi_icon" width="300" height="250" alt="Hitachi"></a>
+   </div>
+
+   <div class="popular_manufacturer_window">
+     <a href="#" class="lg_link"> <img src="#" class="lg_icon" width="300" height="250" alt="LG"></a>
+   </div>
+
+   <div class="popular_manufacturer_window">
+     <a href="#" class="aeg_link"> <img src="#" class="aeg_icon" width="300" height="250" alt="AEG"></a>
+   </div>
+
+   <div class="popular_manufacturer_window">
+     <a href="#" class="metabo_link"> <img src="#" class="metabo_icon" width="300" height="250" alt="Metabo"></a>
+   </div>
+  </section>
+
+  <section class="services">
+   <p>Хороший интернет-магазин отличается от плохого не только ценами!
+      Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными. </p>
+
+      <!-- не совсем понимаю, как работает эта переключалка, пока сделал как radio-->
+   <div class="services_overview">
+     <form action="#" method="post">
+       <div class="radio_cell">
+           <input type="radio" name="service_filter" id="delivery_service" value="delivery_service" class="radio" checked>
+           <label for="delivery_service">Доставка</label>
+       </div>
+       <div class="radio_cell">
+           <input type="radio" name="service_filter" id="guarantee_service" value="guarantee_service" class="radio">
+           <label for="guarantee_service">Гарантия</label>
+       </div>
+       <div class="radio_cell">
+           <input type="radio" name="credit_service" id="credit_service" value="delivery_service" class="radio">
+           <label for="credit_service">Кредит</label>
+       </div>
+       <button type="submit" class="btn commit_service_radio"></button>
+     </form>
+
+     <h1>Доставка</h1>
+     <p>Мы с удовольствием доставим ваш товар прямо
+     к вашему подъезду совершенно бесплатно!
+     Ведь мы неплохо заработаем,
+     поднимая его на ваш этаж!</p>
+   </div>
+  </section>
+  <section class="about_us">
+    <div class="about_us_left">
+  	   <h3>компания «техномарт»</h3>
+  				<p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товара для ремонта и
+              строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+  				<p>Мы можем доставить ваш товар в самые отдаленные точки России!
+  					Техномарт работает со ногими транспортными компаниями:</p>
+
+  				<ul class="delivery_partners">
+  					<li>Деловые линии</li>
+  					<li>Автотрейдинг</li>
+  					<li>ЖелДорЭкспедиция</li>
+  				</ul>
+  				<a class="about_us_link" href="#">подробнее о компании</a>
+  	</div>
+  	<div class="about_us_right">
+      <h3>контакты</h3>
+  		  <p>Вы можете забрать товар сами,
+  	       заехав в наш офис:</p>
+  		<div class="map">
+  			<img src="#" alt="Большая Конюшенная ул, 19">
+  		</div>
+      <a class="about_us_link" href="#">Заблудились? Напишите нам!</a>
+    </div>
+
+  </section>
+</main>
+  <footer class="main_footer">
+      <div class="container">
+          <div class="footer_top">
+
+              <div class="logo_n_contacts">
+                  <img src="#" class="footer_logo" width="80" height="30" alt="Техномарт">
+                  <div class="footer_contacts">
+                г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                +7 (812) 555-05-55
+                  </div>
+              </div>
+
+              <div class="footer_navigation">
+                <a href="#">Компания</a>
+                <a href="#">Новости</a>
+                <a href="#">Каталог</a>
+                <a href="#">Доставка</a>
+                <a href="#">Контакты</a>
+              </div>
+
+        			<div class="footer_service_menu">
+        					<a href="#">Материалы</a>
+        					<a href="#">Техника</a>
+        					<a href="#">Инструмент</a>
+        					<a href="#">Спецпредложения</a>
+        			</div>
+          </div>
+  	    <div class="footer_bot">
+
+  				<div class="footer_copyright">
+  					© 2010-2016 Компания «Техномарт» Все права защищены
+          </div>
+
+  				<div class="footer_social">
+  					<a href="#" class="social_btn social_btn_vk"></a>
+  					<a href="#" class="social_btn social_btn_fb"></a>
+  					<a href="#" class="social_btn social_btn_inst"></a>
+  				</div>
+
+  				<div class="feedback">
+  					<div>Обратная связь:</div>
+  					<a href="#">info@technomart.ru</a>
+  				</div>
+
+  				<div class="design_by">
+  					<div>Разработано — </div>
+  					<a href="#">htmlacademy.ru</a>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+   </body>
+  </html>
