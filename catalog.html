@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
     <title>Перфораторы — Техномарт</title>
   </head>
 
@@ -11,39 +12,45 @@
       <div class="container">
 
         <div class="to_start_page_btn">
-         <a href="#" class="to_start_page_link"> <img src="#" class="logo" width="80" height="30" alt="Техномарт"></a>
+         <a class="to_start_page_link">Техномарт</a>
         </div>
 
         <form action="#" method="post" class="search">
-         <input type="search" placeholder="Поиск:" class="input">
+         <img src="img/icon_search.png" class="icon_search" width="17" height="17" alt="Поиск">
+         <input type="search" placeholder="Поиск:" class="search_input">
          <input type="submit" value="search" class="submit">
         </form>
 
         <div class="bookmark">
-          <span>Закладки:</span>
-          <div class="bookmark_number">0</div>
+          <img src="img/icon_bookmark.png" class="icon_bookmark" width="14" height="16" alt="Закладки">
+          Закладки:
+          <span>0:</span>
         </div>
 
         <div class="cart">
-          <div class="cart_number">10</div>
+          <img src="img/icon_cart.png" class="icon_cart" width="17" height="16" alt="Корзина">
+          Корзина:
+          <span>10</span>
         </div>
 
-        <a href="#" class="checkout_link">Оформить заказ</a>
+        <a href="#" class="btn checkout_link">Оформить заказ</a>
 
       </div>
 
       <div class="container">
 
-        <h2 class="shop_discription">
+        <h2 class="shop_description">
           Интернет-магазин строительных материалов и инструментов для ремонта
         </h2>
 
         <div class="contact">
+          <img src="img/icon_phone.png" class="icon_phone" width="19" height="19" alt="Контакты">
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
         </div>
 
         <div class="user_block">
+          <img src="img/icon_login.png" class="icon_login" width="20" height="17" alt="Вход">
           <span>Равшан Джамшутович</span>
           <a class="login" href="#">Мои заказы</a>
           <a class="login" href="#">Личный кабинет</a>
@@ -81,7 +88,7 @@
     <div class="breadcrumbs">
        <ul>
          <li>
-           <a href="#" class="home_link"> <img src="#" class="home_icon" width="15" height="15" alt="Старт"></a>
+           <a href="#" class="home_link">Главная<img src="img/icon_home.png" class="icon_home" width="15" height="12" alt="Старт"></a>
          </li>
          <li>
            <a href="#">Каталог</a>
@@ -98,34 +105,49 @@
 
        <div class="left_filter">
 
-        <h2>Фильтр</h2>
+        <h3>Фильтр</h3>
 
         <form action="#" method="post">
 
             <div class="price_filter">
               <h3>Цена:</h3>
+              <div class="price_marker">
+              </div>
+              <div class="price_scale_green">
+              </div>
+              <div class="price_scale_gray">
+              </div>
+              <div class="price_marker">
+              </div>
               <input type="text" size="7">
               <input type="text" size="7">
             </div>
 
             <h3>Производители</h3>
             <div class="checkbox_cell">
+                <img src="img/checkbox_checked.png" class="icon_checkbox_checked" width="27" height="23" alt="Выбрать">
+                <!-- в вебинаре велели для чекбоксов использовать картинки,
+                а круглые переключатели радио-селектора сделать через CSS -->
                 <input type="checkbox" name="mfr_filter" id="bosch" value="bosch" class="checkbox" checked>
                 <label for="bosch">Bosch</label>
            </div>
             <div class="checkbox_cell">
+               <img src="img/checkbox.png" class="icon_checkbox" width="23" height="23" alt="Выбрать">
                <input type="checkbox" name="mfr_filter" id="interskol" value="interskol" class="checkbox">
                <label for="interskol">Интерскол</label>
            </div>
            <div class="checkbox_cell">
+               <img src="img/checkbox_checked.png" class="icon_checkbox_checked" width="27" height="23" alt="Выбрать">
                <input type="checkbox" name="mfr_filter" id="makita" value="makita" class="checkbox" checked>
                <label for="makita">Makita</label>
            </div>
            <div class="checkbox_cell">
+               <img src="img/checkbox.png" class="icon_checkbox" width="23" height="23" alt="Выбрать">
                <input type="checkbox" name="mfr_filter" id="dewalt" value="dewalt" class="checkbox">
                <label for="dewalt">Dewalt</label>
            </div>
            <div class="checkbox_cell">
+               <img src="img/checkbox.png" class="icon_checkbox" width="23" height="23" alt="Выбрать">
                <input type="checkbox" name="mfr_filter" id="murrays" value="murrays" class="checkbox">
                <label for="murrays">Hitachi</label>
            </div>
@@ -149,12 +171,16 @@
             <a class="right_filter_link">по цене</a>
             <a class="right_filter_link" href="#">по типу</a>
             <a class="right_filter_link" href="#">по функционалу</a>
+            <div class="right_filter_icons">
+              <a class="right_filter_icon" href="#"></a>
+              <a class="right_filter_icon" href="#"></a>
+            </div>
           </div>
         </div>
 
         <div class="shop_window">
             <div class="product">
-                <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 3000"></a>
+                <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_2.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></a>
                 <div>
                   Перфоратор BOSCH BFG 3000
                 </div>
@@ -164,7 +190,7 @@
                 </div>
            </div>
            <div class="product">
-              <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 6000"></a>
+              <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_3.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></a>
               <div>
                 Перфоратор BOSCH BFG 6000
               </div>
@@ -174,7 +200,7 @@
               </div>
           </div>
           <div class="product">
-             <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 2000"></a>
+             <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_1.png" width="184" height="164" alt="Перфоратор BOSCH BFG 2000"></a>
              <div>
                Перфоратор BOSCH BFG 2000
             </div>
@@ -183,7 +209,7 @@
             </div>
           </div>
           <div class="product">
-            <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 3000"></a>
+            <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_2.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></a>
             <div>
               Перфоратор BOSCH BFG 3000
             </div>
@@ -193,7 +219,7 @@
             </div>
          </div>
          <div class="product">
-           <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 3000"></a>
+           <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_3.png" width="144" height="128" alt="Перфоратор BOSCH BFG 3000"></a>
            <div>
              Перфоратор BOSCH BFG 3000
            </div>
@@ -203,7 +229,7 @@
            </div>
         </div>
         <div class="product">
-          <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 2000"></a>
+          <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_2.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></a>
           <div>
             Перфоратор BOSCH BFG 2000
          </div>
@@ -212,7 +238,7 @@
          </div>
        </div>
        <div class="product">
-         <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 3000"></a>
+         <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_2.png" width="127" height="112" alt="Перфоратор BOSCH BFG 3000"></a>
          <div>
            Перфоратор BOSCH BFG 3000
          </div>
@@ -222,7 +248,7 @@
          </div>
       </div>
       <div class="product">
-        <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 6000"></a>
+        <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_3.png" width="144" height="128" alt="Перфоратор BOSCH BFG 6000"></a>
         <div>
           Перфоратор BOSCH BFG 6000
         </div>
@@ -232,7 +258,7 @@
         </div>
       </div>
       <div class="product">
-       <a href="#" class="to_product_link"><img class="product_picture" src="#" width="130" height="310" alt="Перфоратор BOSCH BFG 2000"></a>
+       <a href="#" class="to_product_link"><img class="product_picture" src="img/bfg_2.png" width="127" height="112" alt="Перфоратор BOSCH BFG 2000"></a>
        <div>
          Перфоратор BOSCH BFG 2000
        </div>
@@ -243,10 +269,20 @@
     </div>
 
     <div class="pagination">
-      <a class="btn shop_page_btn">1</a>
-      <a class="btn shop_page_btn" href="#">2</a>
-      <a class="btn shop_page_btn" href="#">3</a>
-      <a class="btn shop_page_btn" href="#">Следующая</a>
+      <ul>
+        <li>
+          <a class="btn shop_page_btn">1</a>
+        </li>
+        <li>
+          <a class="btn shop_page_btn" href="#">2</a>
+        </li>
+        <li>
+          <a class="btn shop_page_btn" href="#">3</a>
+        </li>
+        <li>
+          <a class="btn shop_page_btn" href="#">Следующая</a>
+        </li>
+      </ul>
     </div>
    </section>
 
@@ -265,49 +301,69 @@
       <div class="footer_top">
        <div class="container">
 
-        <a href="#" class="to_start_page_link"> <img src="#" class="logo" width="80" height="30" alt="Техномарт"></a>
+        <a class="to_start_page_link">Техномарт</a>
 
         <div class="footer_contacts">
           <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <a href="tel:+78125550555">+7 (812) 555-05-55</a>
         </div>
-
-        <div class="footer_navigation">
-            <a href="#">Компания</a>
-            <a href="#">Новости</a>
-            <a href="#">Каталог</a>
-            <a href="#">Доставка</a>
-            <a href="#">Контакты</a>
-
-        		<a href="#">Материалы</a>
-        		<a href="#">Техника</a>
-        		<a href="#">Инструмент</a>
-        		<a href="#">Спецпредложения</a>
-        </div>
       </div>
 
-  	  <div class="footer_bottom">
-        <div class="container">
+      <div class="container">
+       <div class="footer_navigation">
+         <ul>
+           <li>
+             <a href="#">Компания</a>
+           </li>
+           <li>
+             <a href="#">Новости</a>
+           </li>
+           <li>
+             <a href="#">Каталог</a>
+           </li>
+           <li>
+             <a href="#">Доставка</a>
+           </li>
+           <li>
+             <a href="#">Контакты</a>
+           </li>
 
-  			<div class="footer_copyright">
-  				© 2010-2016 Компания «Техномарт» Все права защищены
+           <li>
+             <a href="#">Материалы</a>
+           </li>
+           <li>
+             <a href="#">Техника</a>
+           </li>
+           <li>
+             <a href="#">Инструмент</a>
+           </li>
+           <li>
+             <a href="#">Спецпредложения</a>
+           </li>
+         </ul>
         </div>
+       </div>
+      </div>
 
-  			<div class="footer_social">
-  				<a href="#" class="social_btn social_btn_vk"></a>
-  				<a href="#" class="social_btn social_btn_fb"></a>
-  				<a href="#" class="social_btn social_btn_inst"></a>
-  			</div>
+      <div class="footer_bottom">
+        <div class="container">
+         <div class="footer_copyright">
+           © 2010-2016 Компания «Техномарт» Все права защищены
+         </div>
 
-  			<p>Обратная связь: <br>
-        <a href="mailto:info@technomart.ru">info@technomart.ru</a></p>
+         <div class="footer_social">
+           <a href="#" class="social_btn social_btn_vk"> <img src="img/icon_vk.png" width="20" height="12" alt="VK"></a>
+           <a href="#" class="social_btn social_btn_fb"> <img src="img/icon_facebook.png" width="10" height="18" alt="fb"></a>
+           <a href="#" class="social_btn social_btn_inst"> <img src="img/icon_instagramm.png" width="17" height="17" alt="instg"></a>
+         </div>
 
-  			<p>Разработано — <br>
-  			<a href="#">htmlacademy.ru</a></p>
+         <div>Обратная связь: <br>
+         <a href="mailto:info@technomart.ru">info@technomart.ru</a></div>
 
-  		</div>
-    </div>
-  </div>
-  	</footer>
+         <div>Разработано — <br>
+         <a href="#">htmlacademy.ru</a></div>
+      </div>
+     </div>
+    </footer>
    </body>
   </html>

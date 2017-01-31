@@ -1,0 +1,19 @@
+body {
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "Cuprum", "PT Sans", arial, sans-serif;
+    color: black;
+    line-height: 24px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+}
