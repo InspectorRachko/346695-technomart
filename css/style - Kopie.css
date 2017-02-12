@@ -1,0 +1,618 @@
+body {
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "PT Sans", arial, sans-serif;
+    color: black;
+    line-height: 24px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+span {
+  display: inline-block;
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+li {
+    display: inline;
+}
+
+.container  {
+  width: 940px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header_layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/*
+.main_header {
+  display: flex;
+}
+
+.to_start_page_btn {
+  padding-top: 8px;
+  padding-left: 60px;
+  box-sizing: border-box;
+  min-height: 42px;
+  width: 220px;
+  margin-left: 120px;
+}
+
+.search {
+  min-height: 42px;
+  width: 240px;
+  margin-right: 10px;
+}
+
+.bookmark {
+  min-height: 42px;
+  width: 150px;
+}
+
+.cart {
+  min-height: 42px;
+  width: 170px;
+}
+
+.checkout_link {
+  padding-top: 8px;
+  padding-left: 17px;
+  box-sizing: border-box;
+  min-height: 42px;
+  width: 150px;
+}
+
+.shop_description {
+  padding: 15px;
+  height: 70px;
+  width: 225px;
+  margin-top: 30px;
+  margin-left: 150px;
+  margin-right: 35px;
+}
+
+.sub_header {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main_navigation {
+  min-height: 60px;
+  width: 940px;
+  margin-top: 10px;
+  margin-left: 120px;
+  margin-bottom: 60px;
+}
+
+.contact {
+  max-height: 70px;
+  width: 270px;
+  box-sizing: border-box;
+  margin-top: 45px;
+  margin-right: 80px;
+  padding: 5px;
+}
+
+.telefon {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.user_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 45px;
+  width: 270px;
+  margin-top: 45px;
+}
+
+.banners {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  margin-bottom: 30px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 123px;
+  width: 300px;
+  margin-right: 20px;
+  padding-top: 15px;
+  padding-left: 30px;
+}
+
+*/
+
+/* Никак не могу встроить последний баннер "доставка" на место, час вращал флексы туда-сюда но так и не смог. Сделал его скрытым на время. */
+
+.banner:last-child {
+  display: none;
+}
+
+/* содержимое слайдера тоже пока скрыл, оно ведь потом переключатся будет, пока плохо представляю себе как  */
+
+.slider_item {
+  visibility: hidden;
+}
+
+.slider {
+  height: 266px;
+  width: 620px;
+  margin-left: 120px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+
+.banner:nth-child(1) {
+  margin-left: 120px;
+}
+
+.banner:nth-child(1), .banner:nth-child(2), .banner:nth-child(3)   {
+  margin-top: 60px;
+}
+
+.banner:nth-child(4), .banner:nth-child(5) {
+  margin-top: 20px;
+}
+
+.products_start {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 940px;
+  height: 90px;
+  margin-top: 53px;
+  margin-bottom: 20px;
+}
+
+.popular_products_title {
+  margin-left: 15px;
+  height: 30px;
+  width: 265px;
+}
+
+.popular_products_link {
+  margin-left: auto;
+  margin-right: 35px;
+  height: 38px;
+  width: 255px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-left: 55px;
+}
+
+.popular_products {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.product {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 318px;
+  width: 220px;
+}
+
+.price_n_buy {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.price_n_buy s {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.to_product_title span {
+  margin: 0 auto;
+}
+
+.to_product_title {
+  display: inline-block;
+}
+
+.product:nth-child(1) {
+  margin-left: 120px;
+}
+
+.product:nth-child(4) {
+    margin-right: 140px;
+}
+
+/* четвертая карточка почему-то отказывается реагировать на номерные селекторы, так и не смог скорректировать положение ее элементов */
+.to_product_title:nth-child(4) {
+  margin-bottom: 30px;
+}
+
+.manufacture_start {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 940px;
+  height: 90px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.manufacture_title {
+  height: 30px;
+  width: 265px;
+  margin-left: 15px;
+}
+
+.manufacture_link {
+  margin-left: auto;
+  margin-right: 35px;
+  height: 38px;
+  width: 255px;
+  box-sizing: border-box;
+  padding-top: 7px;
+  padding-left: 55px;
+}
+
+.manufacture {
+  display: flex;
+  flex-wrap: wrap;
+  height: 310px;
+  width: 960px;
+  flex-shrink: 0;
+  margin-bottom: 85px;
+}
+
+.to_manufacture {
+  height: 145px;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services {
+  height: 522px;
+}
+
+.services_title {
+  display: inline-block;
+  margin-top: 70px;
+  margin-left: 120px;
+}
+.services_description {
+  margin-left: 120px;
+  width: 400px;
+  height: 45;
+}
+
+.services_tab {
+  display: flex;
+}
+
+.tab_list_left {
+  display: flex;
+  flex-flow: column;
+  margin-top: 80px;
+  margin-right: 70px;
+  margin-left: 120px;
+  width: 240px;
+  height: 185px;
+}
+
+.tab_list_right {
+  margin-top: 50px;
+  margin-left: 10px;
+  width: 295px;
+  height: 155px;
+}
+
+
+/* Тут поскрывал элементы, которые относятся к этой переключалке пока она не сверстана. Кстати, картинки здесь вообще по-моему должны быть фоновыми (машина и т.д.) */
+
+.service_icon {
+  display: none
+}
+
+.tab_right {
+  display: none
+}
+
+.active_tab_right {
+  display: block;
+}
+
+.about_us {
+  display: flex;
+  height: 536px;
+}
+
+.about_us_left {
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  margin-top: 55px;
+  margin-left: 110px;
+  margin-right: 80px;
+  width: 540px;
+  height: 380px;
+}
+
+.about_us_right {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 55px;
+  margin-right: 80px;
+  width: 320px;
+  height: 380px;
+}
+
+.delivery_partners {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  height: 130px;
+}
+
+.about_us_link {
+  margin-top: 25px;
+  width: 220px;
+  height: 40px;
+}
+
+.are_u_lost_link {
+  margin-top: 25px;
+  width: 300px;
+  height: 40px;
+}
+
+.footer_top {
+  height: 193px;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+}
+
+.to_start_page_link {
+  width: 220px;
+  height: 64px;
+  margin-left: 120px;
+}
+
+.footer_contacts {
+  width: 340px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: 110px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+/* Никак не могу "прижать" эту навигацию влево... Стоит "flex-flow: column; flex-wrap: wrap;", навигация идет как третий элемент, которому не хватает места,
+т.е. переносится вправо как мне и надо. Но почему она переносится на таком расстоянии? Никак не хочет подтянуться ближе к первому ряду.  */
+
+.footer_navigation {
+  width: 570px;
+  height: 100px;
+  margin-top: 30px;
+  margin-right: auto;
+}
+
+.footer_bottom {
+  height: 108px;
+  display: flex;
+}
+
+.footer_copyright {
+  margin-left: 110px;
+  width: 250px;
+  padding-left: 10px;
+  margin-right: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin-right: 90px;
+}
+
+.feedback {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  margin-right: 20px;
+}
+
+.made_by {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+}
+
+
+
+
+
+
+
+
+
+
+/*=======================
+ Временное подсвечивание
+=========================*/
+
+body {
+ padding: 3px;
+}
+
+body > *,
+body > * > *,
+body > * > * > * {
+ position: relative;
+}
+
+body > *::before,
+body > * > *::before,
+body > * > * > *::before {
+ display: none;
+}
+
+body > *::before {
+ top: -3px;
+ left: -3px;
+}
+
+body > * > *::before {
+ top: -3px;
+ left: -3px;
+}
+
+body > * > * > *::before {
+ top: 0;
+ left: 0;
+}
+
+body > * {
+ background: rgba(0, 128, 0, 0.2);
+ box-shadow: 0 0 0 3px green;
+}
+
+body > *::before {
+ color: white;
+
+ background: green;
+}
+
+body > * > * {
+ background: rgba(255, 45, 82, 0.2);
+ box-shadow: 0 0 0 3px rgb(255, 45, 82);
+}
+
+body > * > *::before {
+ color: white;
+
+ background: rgb(255, 45, 82);
+}
+
+body > * > * > * {
+ background: rgba(234, 255, 45, 0.2);
+ box-shadow: inset 0 0 0 2px rgb(234, 255, 45);
+
+}
+
+body > * > * > *::before {
+ color: black;
+
+ background: rgb(234, 255, 45);
+}
+
+.main_header::before {
+ content: ".main-header";
+}
+
+.container::before {
+ content: ".container";
+}
+
+.main_header .container::before {
+ top: auto;
+ bottom: -28px;
+}
+
+.main_navigation::before {
+ content: ".main-navigation";
+}
+
+.user_block::before {
+ content: ".user-block";
+}
+
+.index_logo::before {
+ content: ".index-logo";
+}
+
+.features::before {
+ content: ".features";
+ top: -28px;
+}
+
+.features_item::before {
+ content: ".features-item";
+}
+
+.index_content::before {
+ content: ".index-content";
+}
+
+.index_content_left::before {
+ content: ".index-content-left";
+ left: auto;
+ right: 0;
+}
+
+.index_content_right::before {
+ content: ".index-content-right";
+ left: auto;
+ right: 0;
+}
+
+.main_footer::before {
+ content: ".main-footer";
+}
+
+.main_footer .container::before {
+ top: -28px;
+}
+
+.footer_contacts::before {
+ content: ".footer-contacts";
+}
+
+.footer_social::before {
+ content: ".footer-social";
+}
+
+.footer_copyright::before {
+ content: ".footer-copyright";
+}
