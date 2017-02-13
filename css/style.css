@@ -77,6 +77,13 @@ color: inherit;
   padding-right: 32px;
 }
 
+.cart_filled {
+  color: white;
+  padding-left: 44px;
+  padding-top: 9px;
+  padding-right: 27px;
+}
+
 .checkout_link {
   color: white;
   padding-left: 19px;
@@ -96,7 +103,7 @@ color: inherit;
 .contact {
   font-size: 14px;
   padding-left: 10px;
-  padding-right: 80px;
+  padding-right: 66px;
 }
 
 .telefon {
@@ -115,12 +122,38 @@ color: inherit;
   font-size: 21px;
 }
 
+.user_block_active {
+  display: flex;
+  flex-wrap: wrap;
+  width: 294px;
+  font-size: 21px;
+}
+
+.name {
+  padding-top: 35px;
+  padding-left: 45px;
+  margin-bottom: 0px;
+}
+
+.my_orders {
+  font-size: 16px;
+  padding-left: 15px;
+  text-decoration: underline;
+}
+
+.personal {
+  font-size: 16px;
+  padding-left: 33px;
+  text-decoration: underline;
+}
+
 .login {
   padding-top: 5px;
   padding-right: 25px;
   padding-bottom: 10px;
   padding-left: 32px;
   margin-right: 10px;
+  margin-left: 14px;
 }
 
 .registration {
@@ -547,8 +580,236 @@ color: inherit;
   padding-left: 63px;
 }
 
+/* catalog.html */
+
+.breadcrumbs ul {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  text-transform: uppercase;
+  font-size: 15.5px;
+  margin-top: 12px;
+  margin-bottom: -5px;
+}
+
+.breadcrumbs ul li:nth-child(2) {
+  margin-right: 18px;
+}
+
+.breadcrumbs ul li:last-child  {
+  margin-left: 23px;
+}
+
+.sub_header {
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-left: 30px;
+}
+
+.filter_panel {
+  display: flex;
+}
+
+.filter_panel_left {
+  font-size: 15px;
+  margin-top: 0px;
+  margin-right: 18px;
+  padding-top: 7px;
+  padding-right: 153px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  text-transform: uppercase;
+}
+
+.filter_panel_right {
+  display: flex;
+}
+
+.filter_panel_right span {
+  font-size: 15px;
+  text-transform: uppercase;
+  display: flex;
+  margin-right: 143px;
+  padding-left: 20px;
+}
+
+.right_filter_link {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-top: 7px;
+  padding-right: 70px;
+}
+
+.right_filter_icons {
+  width: 71px;
+  margin-left: -40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.right_filter_up {
+  width: 15px;
+}
+
+.right_filter_down {
+  margin-right: 5px;
+  width: 15px;
+}
+
+.filter_layout {
+  display: flex;
+}
+
+.filter_window {
+  text-transform: uppercase;
+  padding-top: 10px;
+  display: flex;
+  flex-flow: column;
+}
+
+.filter_window h3:first-child {
+  margin-top: 5px;
+}
+
+.price_filter {
+  width: 220px;
+  height: 127px;
+  margin-top: -5px;
+}
+
+.checkbox_header {
+  font-size: 19.5px;
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+
+label {
+  padding-left: 10px;
+}
+
+.checkbox {
+  padding: 10px;
+  margin-bottom: 22px;
+}
+
+.radio_header {
+  font-size: 20.5px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.radio_cell {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.apply_filter_btn {
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 140px;
+  height: 38px;
+  margin-top: 63px;
+}
+
+.shop_window {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.hover_menu {
+  display: none;
+}
+
+.catalog_product {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 318px;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.catalog_product .price_n_buy s {
+  margin-top: 10px;
+}
+
+.catalog_product .price_n_buy .buy_btn {
+  margin-top: -5px;
+}
+
+.catalog_product .price_n_buy_spec {
+  margin-top: 7px;
+}
+
+.catalog_product:nth-child(3n+3) {
+  margin-right: 0px;
+}
+
+.pagination {
+  margin-top: 30px;
+}
+
+.pagination ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-left: 198px;
+}
+
+.pagination ul li a {
+  font-size: 16px;
+  display: block;
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 40px
+}
+
+.next_page_btn {
+  text-transform: uppercase;
+  padding-left: 33px;
+  padding-right: 70px;
+}
+
+.catalog_top {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.about_item_header {
+  margin-top: 0px;
+  padding-top: 73px;
+  font-size: 29px;
+}
+
+.about_item_text {
+  font-size: 14.5px;
+  margin-top: 30px;
+}
+
+.catalog_bottom {
+  padding-bottom: 55px;
+}
+
+
+
+
+
 
 /*
+.home_link {
+  width: 15px;
+  height: 15px;
+  margin-right: -70px;
+}
+
+
+
 
 .footer_navigation {
   width: 570px;
