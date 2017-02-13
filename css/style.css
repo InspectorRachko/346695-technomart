@@ -189,6 +189,7 @@ color: inherit;
 .footer_layout {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .footer_left {
@@ -212,9 +213,10 @@ color: inherit;
 .footer_contacts {
   white-space: nowrap;
   font-size: 18px;
-  padding-top: 15px;
+  padding-top: 18px;
   padding-right: 20px;
   padding-left: 5px;
+  color: white;
 }
 
 .footer_contacts p {
@@ -223,7 +225,8 @@ color: inherit;
 
 .footer_copyright {
   font-size: 16px;
-  margin-top: 67px;
+  margin-top: 70px;
+  color: white;
 }
 
 .footer_copyright p {
@@ -236,10 +239,9 @@ color: inherit;
   flex-wrap: wrap;
 }
 
-/* Почему этот красный блок занимает столько места снизу? Там ведь нет контента. */
 .footer_navigation_1 {
   font-size: 18px;
-  margin-top: 18px;
+  margin-top: 15px;
   margin-left: 10px;
   background-color: red;
   display: flex;
@@ -248,6 +250,52 @@ color: inherit;
 
 .footer_navigation_1 ul li {
   padding-right: 54.5px;
+}
+
+.footer_navigation_2 {
+  font-size: 18px;
+  width: 522px;
+  margin-top: 18px;
+  margin-left: 75px;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  color: yellow;
+}
+
+.footer_social {
+  margin-left: 120px;
+  margin-top: 120px;
+  margin-right: 120px;
+}
+
+.social_btn {
+  width: 40px;
+  height: 40px;
+}
+
+.feedback {
+  font-size: 15px;
+  margin-top: 108px;
+  margin-right: 58px;
+  color: white;
+}
+
+.feedback a {
+  display: block;
+  margin-top: -5px;
+}
+
+
+.made_by {
+  font-size: 15px;
+  margin-top: 108px;
+  color: white;
+}
+
+.made_by  a {
+  display: block;
+  margin-top: -5px;
 }
 
 /* index.html  */
@@ -269,18 +317,41 @@ color: inherit;
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: flex-start;
   height: 123px;
   width: 300px;
   background-color: grey;
   margin-bottom: 20px;
-  margin-right: 10px;
+  padding-bottom: 25px;
+  padding-left: 23px;
+  box-sizing: border-box;
+}
+
+.banner h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.banner_link {
+  font-size: 13px;
+  background-color: gold;
+  margin-left: 10px;
+  padding-top: 5px;
+  padding-right: 25px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  text-align: 30px;
+  text-transform: uppercase;
+}
+
+.banner:nth-child(2), .banner:nth-child(3), .banner:nth-child(5) {
+  margin-left: 20px;
 }
 
 .slider {
   height: 266px;
   width: 620px;
   background-color: green;
-  margin-right: 10px;
 }
 
 .slider_item {
@@ -541,7 +612,7 @@ color: inherit;
 .about_us_link {
   text-transform: uppercase;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 25px;
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 5px;
@@ -573,7 +644,7 @@ color: inherit;
 .are_u_lost_link {
   text-transform: uppercase;
   font-size: 14px;
-  margin-top: 30px;
+  margin-top: 35px;
   padding-top: 10px;
   padding-right: 20px;
   padding-bottom: 5px;
