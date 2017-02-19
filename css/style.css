@@ -7,10 +7,6 @@ body {
     min-width: 940px;
 }
 
-main {
-  background: #ffffff;
-}
-
 h1 {
     font-size: 30px;
     font-weight: bold;
@@ -803,7 +799,6 @@ cursor: default;
   left: 50%;
   margin-left: -330px;
   width: 620px;
-  height: 432px;
   padding: 55px 80px;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
@@ -908,7 +903,7 @@ cursor: default;
   padding-bottom: 5px;
   padding-left: 190px;
   width: 100%;
-  margin-top: 52px;
+  margin-top: 82px;
   text-transform: uppercase;
   z-index: 10;
 }
@@ -1266,7 +1261,7 @@ cursor: default;
   background-position: -10px -1790px;
 }
 
-.materials_link::after {
+.banner.new::after {
   content: "";
   position: absolute;
   top: 0px;
@@ -1370,7 +1365,8 @@ cursor: default;
   width: 220px;
 }
 
-.product:nth-child(4)::after {
+
+.product.new::after {
   content: "";
   position: absolute;
   top: 0px;
@@ -1392,6 +1388,7 @@ cursor: default;
   background: url("../img/buy_mark.png") no-repeat;
   z-index: 1;
 }
+
 
 .product::after {
   content: "";
@@ -1415,6 +1412,18 @@ cursor: default;
   z-index: 1;
 }
 
+.catalog_product.new::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 160px;
+  background: url("../img/sprite.png") no-repeat;
+  width: 60px;
+  height: 59px;
+  background-position: -10px -1875px;
+  z-index: 100;
+}
+
 .catalog_product:nth-child(3)::before {
   content: "";
   position: absolute;
@@ -1426,17 +1435,6 @@ cursor: default;
   z-index: 1;
 }
 
-.catalog_product:nth-child(3)::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 160px;
-  background: url("../img/sprite.png") no-repeat;
-  width: 60px;
-  height: 59px;
-  background-position: -10px -1875px;
-  z-index: 100;
-}
 
 .catalog_product:nth-child(5)::before {
   content: "";
@@ -1449,17 +1447,6 @@ cursor: default;
   z-index: 1;
 }
 
-.catalog_product:nth-child(5)::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 160px;
-  background: url("../img/sprite.png") no-repeat;
-  width: 60px;
-  height: 59px;
-  background-position: -10px -1875px;
-  z-index: 100;
-}
 
 .catalog_product:nth-child(7)::before {
   content: "";
@@ -1470,18 +1457,6 @@ cursor: default;
   height: 40px;
   background: url("../img/buy_mark.png") no-repeat;
   z-index: 1;
-}
-
-.catalog_product:nth-child(7)::after {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 160px;
-  background: url("../img/sprite.png") no-repeat;
-  width: 60px;
-  height: 59px;
-  background-position: -10px -1875px;
-  z-index: 100;
 }
 
 .product:hover {
@@ -2059,12 +2034,12 @@ cursor: default;
   margin-bottom: -5px;
 }
 
-.breadcrumbs ul li:nth-child(2) {
+.breadcrumbs li:nth-child(2) {
   position: relative;
   margin-right: 18px;
 }
 
-.breadcrumbs ul li:nth-child(2)::before {
+.breadcrumbs li:nth-child(2)::before {
   content: "";
   position: absolute;
   bottom: 8px;
@@ -2075,7 +2050,7 @@ cursor: default;
   background-position: -10px -1488px;
 }
 
-.breadcrumbs ul li:nth-child(2)::after {
+.breadcrumbs li:nth-child(2)::after {
   content: "";
   position: absolute;
   bottom: 8px;
@@ -2086,11 +2061,11 @@ cursor: default;
   background-position: -10px -1488px;
 }
 
-.breadcrumbs ul li:last-child  {
+.breadcrumbs li:last-child  {
   margin-left: 23px;
 }
 
-.breadcrumbs ul li:last-child::after {
+.breadcrumbs li:last-child::after {
   content: "";
   position: absolute;
   bottom: 8px;
