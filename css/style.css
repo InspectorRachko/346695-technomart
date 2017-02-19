@@ -1,7 +1,7 @@
 body {
     font-size: 17px;
     font-weight: normal;
-    font-family: "Cuprum", sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     color: black;
     line-height: 24px;
     min-width: 940px;
@@ -61,7 +61,7 @@ cursor: default;
   padding-bottom: 60px;
 }
 
-body::before {
+.main_header::before {
   content: "";
   position: absolute;
   top: 0px;
@@ -108,7 +108,7 @@ body::before {
     z-index: 10;
 }
 
-.search::before {
+.search::after {
   content: "";
   position: absolute;
   opacity: .3;
@@ -122,16 +122,17 @@ body::before {
 }
 
 .search:hover .search_input {
-    background: #212a3a
+    background: #212a3a;
 }
 
-.search:hover::before {
+.search:hover::after {
   opacity: 1;
+  z-index: 5;
 }
 
 .search .search_btn {
     position: absolute;
-    width: 50px;
+    width: 45px;
     height: 42px;
     padding: 0;
     border: 0;
@@ -140,7 +141,7 @@ body::before {
     color: #fff;
     opacity: .3;
     top: 0;
-    left: 0
+    left: 3px;
 }
 
 .search .search_btn:active {
@@ -148,6 +149,7 @@ body::before {
 }
 
 .search .search_input {
+    position: relative;
     padding: 0;
     border: 0;
     width: 221px;
@@ -159,10 +161,10 @@ body::before {
     outline: 0
 }
 
-/* Здесь надо, чтобы иконка с лупой оставалась в активном поле и изменяла цвет на красный. Не знаю, как сделать.  */
-
 .search .search_input:focus {
   background: #fff;
+  background: url("../img/icon_search_red_trick.png") no-repeat;
+  z-index: 100;
 }
 
 .bookmark {
@@ -513,7 +515,7 @@ body::before {
   padding-bottom: 18px;
 }
 
-footer {
+.main_footer {
   background: #32425c;
 }
 
@@ -556,7 +558,6 @@ footer {
 .to_start_page_footer:hover {
     background: #ca2c37
 }
-
 
 .footer_contacts {
   white-space: nowrap;
@@ -763,7 +764,6 @@ footer {
   color: #d13644;
 }
 
-
 .made_by {
   font-size: 15px;
   margin-top: 90px;
@@ -787,9 +787,8 @@ footer {
 .main_footer::before {
   content: "";
   position: absolute;
-  left: -500px;
   bottom: 0px;
-  width: 2000px;
+  width: 100%;
   height: 105px;
   background-color: #293449;
   z-index: 0;
@@ -867,7 +866,7 @@ footer {
   height: 27px;
   font-size: 14px;
   line-height: 24px;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: #000000;
 }
 
@@ -878,7 +877,7 @@ footer {
   height: 27px;
   font-size: 14px;
   line-height: 24px;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: #000000;
 }
 
@@ -888,7 +887,7 @@ footer {
   width: 450px;
   height: 110px;
   font-size: 14px;
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   color: #000000;
 }
 
@@ -1723,18 +1722,24 @@ footer {
   position: relative;
   background: #f2f6f8;
   padding-top: 10px;
-  padding-bottom: 100px;
 }
 
 .main_middle::after {
   content: "";
+  display: none;
   position: absolute;
-  width: 2px;
-  height: 230px;
-  top: 40px;
-  left: 40px;
+  background-color: #f2f6f8;
+  height: 185px;
+  top: 240px;
+  left: 245px;
   z-index: 1000;
 }
+
+.main_middle::after, .content {
+  background-color: #f2f6f8;
+  box-shadow: 5px 0  0.4em 0.4em  rgba(122,122,122,0.150);
+  transform: scale(-1, 1);
+  }
 
 .services {
   padding-top: 40px;
@@ -1767,6 +1772,7 @@ footer {
   flex-flow: column;
   justify-content: flex-start;
   margin-top: 53px;
+  padding-bottom: 100px;
 }
 
 .tab_list_left label {
@@ -1802,7 +1808,7 @@ footer {
   .tab_right {
     padding-right: 0px;
     padding-top: 30px;
-    padding-left: 85px;
+    padding-left: 80px;
     display: none;
     z-index: 100;
   }
@@ -1886,6 +1892,15 @@ footer {
     padding-right: 280px;
   }
 
+.delivery_tab {
+  padding-right: 83px;
+}
+
+.guarantee_tab {
+  padding-right: 0px;
+  font-size: 13px;
+}
+
 .main_bottom {
   padding-top: 10px;
   padding-bottom: 90px;
@@ -1964,7 +1979,6 @@ footer {
   background: url("../img/red_mark.png") no-repeat;
   background-position: 0 0;
 }
-
 
 .about_us_link {
   text-transform: uppercase;
@@ -2267,7 +2281,7 @@ footer {
 }
 .price_controls input {
     width: 95px;
-    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     padding-top: 7px;
     padding-bottom: 9px;
@@ -2508,6 +2522,7 @@ input[type="radio"]:checked + label::before {
 
 /* Sprite.png */
 
+/*
 .sprite {
     background-image: url(spritesheet.png);
     background-repeat: no-repeat;
@@ -2663,3 +2678,5 @@ input[type="radio"]:checked + label::before {
     height: 72px;
     background-position: -10px -1954px;
 }
+
+  */
